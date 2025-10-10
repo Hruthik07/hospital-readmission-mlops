@@ -63,7 +63,8 @@ Hospital_Readmission_MLOps/
 
 ---
 
-## 🔬 Model Workflow
+## 🧩 Model Workflow
+
 
 Below is the complete model lifecycle implemented in this project 👇
 
@@ -77,7 +78,8 @@ Below is the complete model lifecycle implemented in this project 👇
 
 ---
 
-## 📈 Prediction Classes
+## 🩺 Prediction Classes
+
 
 | **Class Label** | **Meaning** |
 |------------------|-------------|
