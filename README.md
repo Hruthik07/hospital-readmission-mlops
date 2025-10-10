@@ -59,3 +59,26 @@ Hospital_Readmission_MLOps/
 ├── requirements.txt           # Project dependencies
 ├── README.md                  # Project documentation
 └── .gitignore
+
+
+🔬 Model Workflow
+
+Data Preprocessing: Clean and prepare patient hospitalization data
+
+Feature Engineering: Extract meaningful clinical patterns from patient metrics
+
+Model Training: Train XGBoost classifier to predict the readmission category
+
+Experiment Tracking: Log metrics (Accuracy, F1-Score, ROC-AUC) using MLflow
+
+Model Registry: Register best model in MLflow Model Registry
+
+API Deployment: Serve model via FastAPI endpoint for real-time inference
+
+Streamlit App: Build interactive UI for healthcare professionals
+
+| **Class** | **Meaning**                                   |
+| --------- | --------------------------------------------- |
+| 0         | Patient will **not be readmitted**            |
+| 1         | Patient will be **readmitted within 30 days** |
+| 2         | Patient will be **readmitted after 30 days**  |
