@@ -1,10 +1,12 @@
 # 🏥 Hospital Readmission Prediction — End-to-End MLOps Project
 
-### 🚀 Overview  
-This project predicts **hospital patient readmissions** using a complete **end-to-end MLOps pipeline**.  
-It combines **data preprocessing, model training, experiment tracking, CI/CD, and web deployment** — all built with modern tools like **MLflow**, **FastAPI**, and **Streamlit**.
+---
 
-The goal is to demonstrate how healthcare analytics can be transformed into a production-grade ML solution using best MLOps practices.
+## 🚀 Overview
+This project predicts **hospital patient readmissions** using a complete **end-to-end MLOps pipeline**.  
+It combines **data preprocessing**, **model training**, **experiment tracking**, **CI/CD**, and **web deployment** — all built with modern tools like **MLflow**, **FastAPI**, and **Streamlit**.
+
+The goal is to demonstrate how **healthcare analytics** can be transformed into a **production-grade ML solution** using best MLOps practices.
 
 ---
 
@@ -15,22 +17,22 @@ The goal is to demonstrate how healthcare analytics can be transformed into a pr
 - ⚙️ REST API Deployment using **FastAPI**  
 - 💻 Interactive Web Application using **Streamlit**  
 - 🧮 Automated Feature Engineering & Model Evaluation  
-- ☁️ Ready for Cloud / CI-CD Integration (GitHub Actions, Docker, Render, or Streamlit Cloud)
+- ☁️ Ready for Cloud / CI/CD Integration (**GitHub Actions**, **Docker**, **Render**, or **Streamlit Cloud**)
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Category | Tools / Libraries |
-|-----------|------------------|
-| **Programming Language** | Python 3.10 |
-| **Data Processing** | Pandas, NumPy, Scikit-learn |
-| **Modeling** | XGBoost, Imbalanced-learn |
-| **Visualization** | Matplotlib, Seaborn |
-| **MLOps Tools** | MLflow, DVC (optional) |
-| **API Framework** | FastAPI + Uvicorn |
-| **Frontend** | Streamlit |
-| **Version Control & CI/CD** | Git, GitHub, YAML pipelines |
+| **Category** | **Tools / Libraries** |
+|---------------|-----------------------|
+| Programming Language | Python 3.10 |
+| Data Processing | Pandas, NumPy, Scikit-learn |
+| Modeling | XGBoost, Imbalanced-learn |
+| Visualization | Matplotlib, Seaborn |
+| MLOps Tools | MLflow, DVC (optional) |
+| API Framework | FastAPI + Uvicorn |
+| Frontend | Streamlit |
+| Version Control & CI/CD | Git, GitHub, YAML pipelines |
 
 ---
 
