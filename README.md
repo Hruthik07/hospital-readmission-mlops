@@ -60,6 +60,7 @@ Hospital_Readmission_MLOps/
 ├── README.md                  # Project documentation
 └── .gitignore
 
+---
 
 🔬 Model Workflow
 
@@ -77,8 +78,12 @@ API Deployment: Serve model via FastAPI endpoint for real-time inference
 
 Streamlit App: Build interactive UI for healthcare professionals
 
+---
+---
 | **Class** | **Meaning**                                   |
 | --------- | --------------------------------------------- |
 | 0         | Patient will **not be readmitted**            |
 | 1         | Patient will be **readmitted within 30 days** |
 | 2         | Patient will be **readmitted after 30 days**  |
+
+---
