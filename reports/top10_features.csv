@@ -1,0 +1,11 @@
+Top_Features
+patient_nbr
+number_inpatient
+number_diagnoses
+time_in_hospital
+encounter_id
+discharge_disposition_id
+num_medications
+num_lab_procedures
+medical_specialty
+number_outpatient

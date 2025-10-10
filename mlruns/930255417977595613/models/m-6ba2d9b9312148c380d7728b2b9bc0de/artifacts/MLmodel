@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Hospital_Readmission_MLOps/mlruns/930255417977595613/models/m-6ba2d9b9312148c380d7728b2b9bc0de/artifacts
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.10.18
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: xgb
+    xgb_version: 3.0.5
+mlflow_version: 3.4.0
+model_id: m-6ba2d9b9312148c380d7728b2b9bc0de
+model_size_bytes: 3866204
+model_uuid: m-6ba2d9b9312148c380d7728b2b9bc0de
+prompts: null
+run_id: 2306e117839a4dd5bf7705888379f9eb
+utc_time_created: '2025-10-09 04:29:50.325814'

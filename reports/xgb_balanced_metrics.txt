@@ -1,0 +1,16 @@
+XGBoost Balanced Model Metrics
+==============================
+Accuracy: 0.5863
+F1 Score: 0.5700
+ROC-AUC: 0.6833
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0      0.312     0.112     0.165      2285
+           1      0.499     0.539     0.518      7117
+           2      0.662     0.716     0.688     10952
+
+    accuracy                          0.586     20354
+   macro avg      0.491     0.456     0.457     20354
+weighted avg      0.566     0.586     0.570     20354

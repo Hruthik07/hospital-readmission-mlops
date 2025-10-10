@@ -1,0 +1,15 @@
+digest: f37f1842
+name: dataset
+profile: '{"num_rows": 20354, "num_elements": 203540}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "patient_nbr", "required":
+  true}, {"type": "double", "name": "number_inpatient", "required": true}, {"type":
+  "double", "name": "number_diagnoses", "required": true}, {"type": "double", "name":
+  "time_in_hospital", "required": true}, {"type": "double", "name": "encounter_id",
+  "required": true}, {"type": "double", "name": "discharge_disposition_id", "required":
+  true}, {"type": "double", "name": "num_medications", "required": true}, {"type":
+  "double", "name": "num_lab_procedures", "required": true}, {"type": "double", "name":
+  "medical_specialty", "required": true}, {"type": "double", "name": "number_outpatient",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "gdhru", "mlflow.source.name": "src/mlflow_autologging.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Hospital_Readmission_MLOps/mlruns/930255417977595613/models/m-3653b0ff305846379635f1a439706f70/artifacts
+creation_timestamp: 1759982862903
+experiment_id: '930255417977595613'
+last_updated_timestamp: 1759982867756
+model_id: m-3653b0ff305846379635f1a439706f70
+model_type: null
+name: model
+source_run_id: 2c7537012ef1417eb00213ecf22882c9
+status: 2
+status_message: null

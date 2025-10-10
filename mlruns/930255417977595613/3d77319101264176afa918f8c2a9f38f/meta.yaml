@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Hospital_Readmission_MLOps/mlruns/930255417977595613/3d77319101264176afa918f8c2a9f38f/artifacts
+end_time: 1759981150061
+entry_point_name: ''
+experiment_id: '930255417977595613'
+lifecycle_stage: active
+run_id: 3d77319101264176afa918f8c2a9f38f
+run_name: XGBoost_Balanced_Model
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759981140707
+status: 3
+tags: []
+user_id: gdhru

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Hospital_Readmission_MLOps/mlruns/930255417977595613/2c7537012ef1417eb00213ecf22882c9/artifacts
+end_time: 1759982868151
+entry_point_name: ''
+experiment_id: '930255417977595613'
+lifecycle_stage: active
+run_id: 2c7537012ef1417eb00213ecf22882c9
+run_name: Baseline_XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759982861404
+status: 3
+tags: []
+user_id: gdhru
