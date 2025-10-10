@@ -60,30 +60,27 @@ Hospital_Readmission_MLOps/
 ├── README.md                  # Project documentation
 └── .gitignore
 
----
-
-🔬 Model Workflow
-
-Data Preprocessing: Clean and prepare patient hospitalization data
-
-Feature Engineering: Extract meaningful clinical patterns from patient metrics
-
-Model Training: Train XGBoost classifier to predict the readmission category
-
-Experiment Tracking: Log metrics (Accuracy, F1-Score, ROC-AUC) using MLflow
-
-Model Registry: Register best model in MLflow Model Registry
-
-API Deployment: Serve model via FastAPI endpoint for real-time inference
-
-Streamlit App: Build interactive UI for healthcare professionals
 
 ---
----
-| **Class** | **Meaning**                                   |
-| --------- | --------------------------------------------- |
-| 0         | Patient will **not be readmitted**            |
-| 1         | Patient will be **readmitted within 30 days** |
-| 2         | Patient will be **readmitted after 30 days**  |
+
+## 🔬 Model Workflow
+
+Below is the complete model lifecycle implemented in this project 👇
+
+1. **Data Preprocessing** – Cleaning missing values, handling categorical encoding, and normalizing numeric columns.  
+2. **Feature Engineering** – Extracting key hospital visit statistics, reducing dimensionality.  
+3. **Model Training** – Training the XGBoost classifier on reduced-feature dataset.  
+4. **Experiment Tracking** – Using **MLflow** to log metrics (Accuracy, F1, ROC-AUC).  
+5. **Model Registry** – Registering the best performing model version in MLflow.  
+6. **FastAPI Deployment** – Serving real-time predictions through REST endpoints.  
+7. **Streamlit Frontend** – Providing an interactive web UI for hospital staff.
 
 ---
+
+## 📈 Prediction Classes
+
+| **Class Label** | **Meaning** |
+|------------------|-------------|
+| **0** | Patient will **not be readmitted** |
+| **1** | Patient will be **readmitted within 30 days** |
+| **2** | Patient will be **readmitted after 30 days** |
