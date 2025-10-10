@@ -2,7 +2,7 @@
 --prefer-binary
 streamlit==1.39.0
 pandas==2.3.3
-numpy==1.26.4
+numpy==2.1.2
 scikit-learn==1.5.1
 xgboost==2.1.1
 imbalanced-learn==0.12.3
