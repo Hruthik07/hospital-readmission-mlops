@@ -1,0 +1,12 @@
+# Environment: deploy_app
+# Purpose: Streamlit + FastAPI Deployment (Lightweight Inference)
+
+streamlit==1.39.0
+fastapi==0.115.2
+uvicorn==0.30.3
+numpy==1.26.4
+pandas==2.3.3
+joblib==1.4.2
+xgboost==2.1.1
+mlflow-skinny==2.15.1
+pyarrow==15.0.2
