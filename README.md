@@ -1,94 +1,62 @@
 # 🏥 Hospital Readmission Prediction — End-to-End MLOps Project  
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![MLflow](https://img.shields.io/badge/MLflow-Tracking%20%26%20Registry-orange)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-yellow)
+[![Open in Streamlit](https://img.shields.io/badge/Launch%20App-Streamlit%20🚀-brightgreen)](https://hospital-readmission-mlops-mnsgnkvun4kxvjvtrxowdt.streamlit.app)
+[![GitHub Repository](https://img.shields.io/badge/View%20Code-GitHub-black?logo=github)](https://github.com/hruthik07/hospital-readmission-mlops)
 
 ---
 
-## 🚀 Overview  
-This project predicts **hospital patient readmissions** using a complete **end-to-end MLOps pipeline**.  
-It combines **data preprocessing**, **model training**, **experiment tracking**, **CI/CD**, and **web deployment** — all built with modern tools like **MLflow**, **FastAPI**, and **Streamlit**.
+## 🌟 Project Overview  
+This project predicts whether a patient is likely to be readmitted to the hospital within **30 days**, **after 30 days**, or **not readmitted at all**.  
+It demonstrates a **complete MLOps lifecycle** — covering data preprocessing, model training, experiment tracking, CI/CD automation, and deployment.
 
-The goal is to demonstrate how **healthcare analytics** can be transformed into a **production-grade ML solution** using best MLOps practices.
-
----
-
-## 🧠 Key Highlights  
-
-- ✅ End-to-End MLOps Lifecycle Implementation  
-- 📊 ML Experiment Tracking and Model Registry with **MLflow**  
-- ⚙️ REST API Deployment using **FastAPI**  
-- 💻 Interactive Web Application using **Streamlit**  
-- 🧮 Automated Feature Engineering & Model Evaluation  
-- ☁️ Ready for Cloud / CI/CD Integration (**GitHub Actions**, **Docker**, **Render**, or **Streamlit Cloud**)  
-
----
-
-## 🩺 Dataset  
-The dataset used in this project represents **hospital discharge records** — including patient demographics, admission types, diagnosis codes, length of stay, and readmission status.  
-> *Note:* The data is anonymized and preprocessed for educational and research purposes.  
+The goal is to build a **production-ready healthcare AI system** that helps hospitals optimize patient care and reduce readmission rates.
 
 ---
 
 ## ⚙️ Tech Stack  
-
-| **Category** | **Tools / Libraries** |
-|---------------|-----------------------|
-| Programming Language | Python 3.10 |
-| Data Processing | Pandas, NumPy, Scikit-learn |
-| Modeling | XGBoost, Imbalanced-learn |
-| Visualization | Matplotlib, Seaborn |
-| MLOps Tools | MLflow, DVC (optional) |
-| API Framework | FastAPI + Uvicorn |
-| Frontend | Streamlit |
-| Version Control & CI/CD | Git, GitHub, YAML pipelines |
+| Layer | Tools & Technologies |
+|-------|----------------------|
+| **Frontend** | Streamlit |
+| **Backend** | FastAPI |
+| **Modeling** | XGBoost, Scikit-Learn |
+| **Tracking & Logging** | MLflow |
+| **CI/CD** | GitHub Actions |
+| **Deployment** | Streamlit Cloud |
+| **Language** | Python (v3.11) |
 
 ---
 
-## 🏗️ Project Architecture  
+## 🚀 Features  
+✅ End-to-End MLOps Pipeline  
+✅ MLflow Integration for Experiment Tracking  
+✅ Streamlit-based Interactive Web App  
+✅ CI/CD with GitHub Actions  
+✅ FastAPI Backend for Model Serving  
+✅ Real-Time Patient Readmission Predictions  
 
-```bash
-Hospital_Readmission_MLOps/
-│
-├── data/
-│   ├── raw/                   # Raw input data
-│   ├── processed/             # Processed and cleaned data
-│
-├── src/
-│   ├── data_preprocessing.py  # Data cleaning and transformation
-│   ├── feature_selection.py   # Feature importance & selection
-│   ├── mlflow_tracking.py     # MLflow experiment tracking
-│   ├── mlflow_manual_log.py   # Manual logging with metrics
-│   ├── mlflow_model_registry.py # Register best model
-│   ├── fastapi_deploy.py      # REST API for real-time inference
-│   ├── app_streamlit.py       # Streamlit frontend
-│
-├── models/                    # Trained and registered MLflow models
-├── mlruns/                    # MLflow tracking metadata
-├── requirements.txt           # Project dependencies
-├── README.md                  # Project documentation
-└── .gitignore
+---
 
+## 📊 Model Insights  
+- Multi-class Classification:  
+  - **Class 0:** No Readmission (Safe)  
+  - **Class 1:** Readmitted (>30 Days) (Moderate Risk)  
+  - **Class 2:** Readmitted (<30 Days) (High Risk)  
+- Trained using **Balanced XGBoost Model**  
+- Feature Importance Analysis shows that **number of inpatient visits**, **discharge disposition**, and **hospital stay duration** are top predictors.  
 
-## 🔬 Model Workflow  
+---
 
-```text
-1. Data Preprocessing – Cleaning missing values, handling categorical encoding, and normalizing numeric columns.  
-2. Feature Engineering – Extracting key hospital visit statistics, reducing dimensionality.  
-3. Model Training – Training the XGBoost classifier on reduced-feature dataset.  
-4. Experiment Tracking – Using MLflow to log metrics (Accuracy, F1, ROC-AUC).  
-5. Model Registry – Registering the best performing model version in MLflow.  
-6. FastAPI Deployment – Serving real-time predictions through REST endpoints.  
-7. Streamlit Frontend – Providing an interactive web UI for hospital staff.
+## 🧠 Developed By  
+**G.D. Hruthik**  
+🎓 M.S. in Data Science & Analytics (USA)  
+💼 Aspiring Machine Learning Engineer | MLOps Enthusiast  
+📍 Passionate about AI in Healthcare  
 
-## 📈 Prediction Classes  
+📧 Contact: [LinkedIn](https://www.linkedin.com/in/g-d-hruthik-055915206)
 
-```text
-0 → Patient will NOT be readmitted  
-1 → Patient will be readmitted within 30 days  
-2 → Patient will be readmitted after 30 days
+---
+
+> 💬 *“This project showcases how healthcare analytics can be transformed into a production-grade AI system with modern MLOps practices.”*
+
+---
 
