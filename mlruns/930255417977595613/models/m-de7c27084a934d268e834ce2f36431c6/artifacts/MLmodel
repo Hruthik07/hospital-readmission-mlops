@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Hospital_Readmission_MLOps/mlruns/930255417977595613/models/m-de7c27084a934d268e834ce2f36431c6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.18
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.4.0
+model_id: m-de7c27084a934d268e834ce2f36431c6
+model_size_bytes: 3869552
+model_uuid: m-de7c27084a934d268e834ce2f36431c6
+prompts: null
+run_id: 821935cccc7f48929a1b6c1bde98b00c
+utc_time_created: '2025-10-12 00:22:19.916651'
