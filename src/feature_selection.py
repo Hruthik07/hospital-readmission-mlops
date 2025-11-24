@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest, f_classif
 import joblib
@@ -81,7 +80,7 @@ pd.DataFrame({"Top_Features": top10_feature_names}).to_csv(
     os.path.join(RESULTS_DIR, "top10_features.csv"), index=False
 )
 joblib.dump(top10_feature_names, os.path.join(DATA_DIR, "top10_features.joblib"))
-print(f"\n✅ Top 10 feature names saved to:")
+print("\n✅ Top 10 feature names saved to:")
 print(f"   → {os.path.join(RESULTS_DIR, 'top10_features.csv')}")
 print(f"   → {os.path.join(DATA_DIR, 'top10_features.joblib')}")
 

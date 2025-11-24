@@ -1,6 +1,5 @@
 
 import pandas as pd
-import numpy as np
 from xgboost import XGBClassifier, plot_importance
 from sklearn.metrics import (
     accuracy_score,
@@ -67,7 +66,7 @@ acc = accuracy_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred, average="weighted")
 roc = roc_auc_score(y_test, y_proba, multi_class="ovr")
 
-print(f"\n🎯 Model Performance:")
+print("\n🎯 Model Performance:")
 print(f"Accuracy:  {acc:.4f}")
 print(f"F1 Score:  {f1:.4f}")
 print(f"ROC-AUC:   {roc:.4f}")
@@ -115,6 +114,6 @@ print("✅ Feature importance plot saved to reports/xgboost_feature_importance.p
 # SAVE FINAL MODEL
 # ==============================
 joblib.dump(xgb_model, os.path.join(MODEL_DIR, "final_xgboost_model.joblib"))
-print(f"\n💾 Final model saved to models/final_xgboost_model.joblib")
+print("\n💾 Final model saved to models/final_xgboost_model.joblib")
 
 print("\n🎉 Phase 2 Completed Successfully: XGBoost Model Trained and Saved!")

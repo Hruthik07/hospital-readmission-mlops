@@ -1,8 +1,15 @@
+"""
+FastAPI Deployment Module for Hospital Readmission Prediction.
+
+This module provides a REST API for making hospital readmission predictions
+using a trained XGBoost model loaded from MLflow Model Registry.
+"""
+
+import traceback
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import mlflow
 import pandas as pd
-import traceback
 
 # -------------------------------------------------
 # 🚀 Initialize FastAPI Application
@@ -35,6 +42,7 @@ except Exception as e:
 # 🧩 Define Input Schema
 # -------------------------------------------------
 class PatientData(BaseModel):
+    """Schema for patient data input."""
     encounter_id: float
     patient_nbr: float
     time_in_hospital: int
@@ -46,20 +54,49 @@ class PatientData(BaseModel):
     medical_specialty: float
     discharge_disposition_id: float
 
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "encounter_id": 11001.0,
+                "patient_nbr": 21001.0,
+                "time_in_hospital": 5,
+                "num_lab_procedures": 45,
+                "num_medications": 12,
+                "number_outpatient": 1,
+                "number_inpatient": 1,
+                "number_diagnoses": 6,
+                "medical_specialty": 1.0,
+                "discharge_disposition_id": 1.0
+            }
+        }
+
 
 # -------------------------------------------------
 # 🌐 API Endpoints
 # -------------------------------------------------
 @app.get("/")
 def root():
+    """Health check endpoint to verify API is running."""
     return {"message": "✅ Hospital Readmission Prediction API is live!"}
 
 
 @app.post("/predict")
-def predict(data: dict):
-    import numpy as np
+def predict(data: PatientData):
+    """
+    Predict hospital readmission for a patient.
+
+    Args:
+        data: PatientData model containing patient features
+
+    Returns:
+        Dictionary with prediction class and probabilities
+
+    Raises:
+        HTTPException: If prediction fails
+    """
     try:
-        df = pd.DataFrame([data])
+        # Convert Pydantic model to dictionary then DataFrame
+        df = pd.DataFrame([data.model_dump()])
 
         # --- Handle feature order automatically ---
         expected_cols = model.feature_names_in_ if hasattr(model, "feature_names_in_") else df.columns
@@ -77,6 +114,5 @@ def predict(data: dict):
         return {"prediction": prediction, "probabilities": proba}
 
     except Exception as e:
-        import traceback
         print("❌ Prediction error:", traceback.format_exc())
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")

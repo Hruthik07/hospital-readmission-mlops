@@ -17,6 +17,8 @@ experiment = client.get_experiment_by_name(EXPERIMENT_NAME)
 # ---------------------------
 # Helper: recursive artifact search
 # ---------------------------
+
+
 def find_model_artifact(run_id, path=""):
     for item in client.list_artifacts(run_id, path):
         if item.is_dir:

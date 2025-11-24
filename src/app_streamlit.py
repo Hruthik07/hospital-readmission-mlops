@@ -15,12 +15,24 @@ st.set_page_config(
 # -------------------------------------------------------------------
 # ✅ Load Model
 # -------------------------------------------------------------------
+
+
 @st.cache_resource
 def load_model():
-    model = joblib.load("models/final_xgboost_model.joblib")
-    return model
+    """Load the trained XGBoost model from disk."""
+    try:
+        model = joblib.load("models/final_xgboost_model.joblib")
+        return model
+    except FileNotFoundError:
+        st.error("❌ Model file not found! Please ensure 'models/final_xgboost_model.joblib' exists.")
+        st.stop()
+    except Exception as e:
+        st.error(f"❌ Error loading model: {e}")
+        st.stop()
+
 
 model = load_model()
+
 
 # -------------------------------------------------------------------
 # ✅ App Title and Description
@@ -28,10 +40,10 @@ model = load_model()
 st.title("🏥 Hospital Readmission Prediction (Multiclass Model)")
 st.markdown(
     """
-    This app predicts the **likelihood of a hospital patient being readmitted**  
+    This app predicts the **likelihood of a hospital patient being readmitted**
     and classifies the readmission as:
-    - 🟢 **0:** No Readmission  
-    - 🟠 **1:** Readmitted (>30 days)  
+    - 🟢 **0:** No Readmission
+    - 🟠 **1:** Readmitted (>30 days)
     - 🔴 **2:** Readmitted (<30 days)
     """
 )
