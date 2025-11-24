@@ -7,7 +7,7 @@ import os
 import mlflow
 import mlflow.sklearn
 from joblib import load
-from sklearn.metrics import accuracy_score, f1_score, roc_auc_score, classification_report
+from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 import pandas as pd
 
 # -----------------------------

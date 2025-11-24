@@ -79,7 +79,7 @@ acc = accuracy_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred, average="weighted")
 roc = roc_auc_score(y_test, y_proba, multi_class="ovr")
 
-print(f"\n🎯 Balanced Model Performance:")
+print("\n🎯 Balanced Model Performance:")
 print(f"Accuracy:  {acc:.4f}")
 print(f"F1 Score:  {f1:.4f}")
 print(f"ROC-AUC:   {roc:.4f}")

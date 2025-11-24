@@ -1,3 +1,9 @@
+"""
+Data Preprocessing Pipeline for Hospital Readmission Project.
+
+This module handles data loading, cleaning, encoding, scaling, and train-test splitting.
+"""
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
