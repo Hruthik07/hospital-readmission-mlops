@@ -5,6 +5,7 @@ This module provides a REST API for making hospital readmission predictions
 using a trained XGBoost model loaded from MLflow Model Registry.
 """
 
+import traceback
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import mlflow
@@ -80,12 +81,12 @@ def root():
 
 
 @app.post("/predict")
-def predict(data: dict):
+def predict(data: PatientData):
     """
     Predict hospital readmission for a patient.
 
     Args:
-        data: Dictionary containing patient features
+        data: PatientData model containing patient features
 
     Returns:
         Dictionary with prediction class and probabilities
@@ -94,7 +95,8 @@ def predict(data: dict):
         HTTPException: If prediction fails
     """
     try:
-        df = pd.DataFrame([data])
+        # Convert Pydantic model to dictionary then DataFrame
+        df = pd.DataFrame([data.model_dump()])
 
         # --- Handle feature order automatically ---
         expected_cols = model.feature_names_in_ if hasattr(model, "feature_names_in_") else df.columns
@@ -112,6 +114,5 @@ def predict(data: dict):
         return {"prediction": prediction, "probabilities": proba}
 
     except Exception as e:
-        import traceback
         print("❌ Prediction error:", traceback.format_exc())
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
